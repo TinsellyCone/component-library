@@ -1,0 +1,32 @@
+div.chip {
+    border-radius: 1000px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--color);
+    width: fit-content;
+    height: fit-content;
+    color: var(--accent-text);
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+div.chip.transparent {
+    background-color: var(--color-transparent);
+    color: var(--color);
+}
+
+div.chip.outline {
+    background-color: transparent;
+    color: var(--color);
+    border: 1px solid var(--color);
+}
+
+div.chip > svg {
+    height: 2ch;
+    width: auto;
+}

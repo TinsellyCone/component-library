@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    --accent-r: 51;
+    --accent-g: 133;
+    --accent-b: 255;
+    --hover-offset: 10; /* How much should the RGB values decrease by when hovering? */
+    --accent-text: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*    PLEASE |    */
+/*    DON'T  |    */
+/*    TOUCH  V    */
+* {
+    
+    /* Color Calculations */
+    --color: rgb(var(--color-r), var(--color-g), var(--color-b));
+    --color-hover: rgb(calc(var(--color-r) - var(--hover-offset)), calc(var(--color-g) - var(--hover-offset)), calc(var(--color-b) - var(--hover-offset)));
+    --color-transparent: rgba(var(--color-r), var(--color-g), var(--color-b), 0.15);
+    --color-transparent-hover: rgba(calc(var(--color-r) - var(--hover-offset)), calc(var(--color-g) - var(--hover-offset)), calc(var(--color-b) - var(--hover-offset)), 0.15);
+    
+    /* Sets the default color value to the accent color */
+    --color-r: var(--accent-r);
+    --color-g: var(--accent-g);
+    --color-b: var(--accent-b);
+}

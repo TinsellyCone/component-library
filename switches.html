@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/switches.css">
+    <title>Switches</title>
+</head>
+<body>
+    
+    <div id="switch" class="switch enabled" onclick="switchClick('switch')"></div>
+
+</body>
+</html>
+
+<script>
+    function switchClick(switchID) {
+        if (document.getElementById(switchID).className == "switch enabled") {
+            document.getElementById(switchID).className = "switch";
+        }
+        else {
+           document.getElementById(switchID).className = "switch enabled";
+        }
+    }
+</script>

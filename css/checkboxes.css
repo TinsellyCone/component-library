@@ -1,0 +1,26 @@
+div.checkbox {
+    --checkURL: url(../svg/check.svg);
+    height: 18px;
+    width: 18px;
+    background-color: #FFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.15s background-color ease, 0.15s border ease, 0.15s background-position ease;
+    background-image: var(--checkURL);
+    background-size: contain;
+    background-position: 0px 20px;
+    background-repeat: no-repeat;
+}
+div.checkbox.checked {
+    background-color: var(--color);
+    border: 1px solid var(--color);
+    background-position: 0px 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+    div.checkbox {
+        border: 1px solid rgb(80,80,80);
+        background-color: rgb(55,55,55);
+    }
+}

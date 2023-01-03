@@ -1,0 +1,35 @@
+div.switch {
+    width: 42px;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+    transition: 0.25s background-color ease, 0.25s border ease;
+}
+div.switch.enabled {
+    background-color: var(--color);
+    border: 1px solid var(--color);
+}
+div.switch::after {
+    content: "";
+    display: block;
+    position: relative;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    top: 2.5px;
+    left: 2.5px;
+    border-radius: 15px;
+    transition: 0.25s left ease;
+}
+div.switch.enabled::after {
+    left: 23.5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    div.switch {
+        border: 1px solid rgb(80,80,80);
+        background-color: rgb(55,55,55);
+    }
+}

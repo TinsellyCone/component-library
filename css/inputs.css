@@ -1,0 +1,64 @@
+input[type=text],input[type=password] {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 40ch;
+    transition: 0.25s outline ease-in-out;
+}
+
+input[type=text],input[type=password] {
+    background: #FFF;
+    outline: 2px solid #CED4DA;
+}
+input[type=text]::placeholder,input[type=password]::placeholder {
+    color: #CED4DA;
+}
+input[type=text]:focus,input[type=password]:focus {
+    outline: 2px solid var(--color);
+}
+
+input[type=text].filled,input[type=password].filled {
+    background: #F3F3F3;
+    outline: 0px solid transparent;
+}
+input[type=text].filled::placeholder,input[type=password].filled::placeholder {
+    color: #ADB5BD;
+}
+input[type=text].filled:focus,input[type=password].filled:focus {
+    outline: 2px solid var(--color);
+}
+
+label:has(input[type=text]),label:has(input[type=password]) {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+label:has(input[type=text]) > p,label:has(input[type=password]) > p {
+    color: #ADB5BD;
+    font-weight: 400;
+    font-size: x-small;
+    margin-top: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    input[type=text],input[type=password] {
+        background: rgb(55,55,55);
+        outline: 2px solid rgb(80,80,80);
+        color: white;
+    }
+    input[type=text]::placeholder,input[type=password]::placeholder {
+        color: rgb(120,120,120);
+    }
+    input[type=text].filled,input[type=password].filled {
+        background: rgb(65,65,65);
+        color: white;
+    }
+
+    label:has(input[type=text]),label:has(input[type=password]) {
+        color: white;
+    }
+}
