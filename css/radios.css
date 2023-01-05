@@ -1,0 +1,23 @@
+input[type=radio] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    border: 2px solid #CED4DA;
+    transition: 0.25s border ease, 0.15s background-color ease;
+}
+input[type=radio]:checked {
+    appearance: none;
+    border: 7px solid var(--color);
+}
+
+@media (prefers-color-scheme: dark) {
+    input[type=radio] {
+        border: 2px solid rgb(80,80,80);
+        background-color: rgb(55,55,55);
+    }
+    input[type=radio]:checked {
+        background-color: #FFF;
+    }
+}
