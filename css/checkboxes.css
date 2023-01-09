@@ -3,6 +3,7 @@ input[type=checkbox] {
     appearance: none;
     height: 18px;
     width: 18px;
+    aspect-ratio: 1;
     background-color: #FFF;
     border: 1px solid #CED4DA;
     border-radius: 4px;
@@ -11,6 +12,7 @@ input[type=checkbox] {
     background-size: contain;
     background-position: 0px 20px;
     background-repeat: no-repeat;
+    margin-right: 10px;
 }
 input[type=checkbox]:checked {
     appearance: none;

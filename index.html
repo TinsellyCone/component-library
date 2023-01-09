@@ -14,9 +14,9 @@
     <title>TinsellyCone HTML Library</title>
 </head>
 <body>
-    <h1>HTML Library</h1>
+    <!-- <h1>HTML Library</h1> -->
     <div id="buttons">
-        <h3>Buttons</h3>
+        <!-- <h3>Buttons</h3> -->
         <button class="filled">
             Filled
         </button>
@@ -43,32 +43,32 @@
         </button>
     </div>
     <div id="inputs">
-        <h3>Input Fields</h3>
-        <input type="text" class="default" placeholder="Default"> <br>
-        <input type="text" class="filled" placeholder="Filled">
+        <!-- <h3>Input Fields</h3> -->
+        <input type="text" class="default" placeholder="Default" style="margin: 2px;"> <br>
+        <input type="text" class="filled" placeholder="Filled" style="margin: 2px;">
     </div>
     <div id="chips">
-        <h3>Chips</h3>
-        <div class="chip filled">Filled
+        <!-- <h3>Chips</h3> -->
+        <div class="chip filled pointer">Filled
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
-        <div class="chip transparent">Transparent
+        <div class="chip transparent pointer">Transparent
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
-        <div class="chip outline">Outline
+        <div class="chip outline pointer">Outline
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
     </div>
     <div id="checkboxes">
-        <h3>Checkbox</h3>
-        <input type="checkbox">
+        <!-- <h3>Checkbox</h3> -->
+        <div class="flex"><input id="checkbox" type="checkbox"><label for="checkbox">I agree to sell my privacy</label></div>
     </div>
     <div id="switches">
-        <h3>Switches</h3>
+        <!-- <h3>Switches</h3> -->
         <input type="checkbox" class="switch" style="--checkURL: none">
     </div>
     <div id="radios">
-        <h3>Radios</h3>
+        <!-- <h3>Radios</h3> -->
         <input type="radio" name="radio">
         <input type="radio" name="radio">
         <input type="radio" name="radio">
@@ -80,6 +80,7 @@
     body {
         font-family: 'Open Sans', sans-serif;
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
     }
     
@@ -88,5 +89,11 @@
             background: rgb(50,50,50);
             color: white;
         }
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>

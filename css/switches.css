@@ -18,7 +18,6 @@ input[type=checkbox].switch::after {
     background-color: white;
     height: 15px;
     width: 15px;
-    /* transform: translate(50%, 0%); */
     top: calc(50% - 7.5px);
     left: calc(2.5px);
     border-radius: 15px;

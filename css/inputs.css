@@ -50,7 +50,7 @@ label:has(input[type=text]) > p,label:has(input[type=password]) > p {
         outline: 2px solid rgb(80,80,80);
         color: white;
     }
-    input[type=text]::placeholder,input[type=password]::placeholder {
+    input[type=text]::placeholder,input[type=password]::placeholder,input[type=text].filled::placeholder,input[type=password].filled::placeholder {
         color: rgb(120,120,120);
     }
     input[type=text].filled,input[type=password].filled {
