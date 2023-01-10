@@ -30,3 +30,7 @@ div.chip > svg {
     height: 2ch;
     width: auto;
 }
+
+div.chip.pointer {
+    cursor: pointer;
+}

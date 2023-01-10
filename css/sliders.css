@@ -6,12 +6,15 @@ input[type=range] {
     border-radius: 100px;
     border: none;
 }
-input[type=range]::-moz-range-progress {
+input[type=range]::-moz-range-progress,
+input[type=range]::-webkit-slider-runnable-track {
     background-color: var(--color);
     height: 5px;
     border-radius: 100px 0 0 100px;
 }
-input[type=range]::-moz-range-thumb {
+input[type=range]::-moz-range-thumb,
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     background-color: white;
     outline: 1px solid var(--color);
     border: 2px solid var(--color);
@@ -20,8 +23,7 @@ input[type=range]::-moz-range-thumb {
     width: 7px;
     transition: 0.25s border ease, 0.25s height ease, 0.25s width ease;
 }
-input[type=range]::-moz-range-thumb:hover {
+input[type=range]::-moz-range-thumb:hover,
+input[type=range]::-webkit-slider-thumb:hover {
     border: 3px solid var(--color);
-    height: 5px;
-    width: 5px;
 }

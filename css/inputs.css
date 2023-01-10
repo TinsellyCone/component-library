@@ -7,6 +7,8 @@ input[type=text],input[type=password] {
     font-weight: 400;
     width: 40ch;
     transition: 0.25s outline ease-in-out;
+    margin: 2px;
+    margin-left: 0px;
 }
 
 input[type=text],input[type=password] {
@@ -42,6 +44,7 @@ label:has(input[type=text]) > p,label:has(input[type=password]) > p {
     font-weight: 400;
     font-size: x-small;
     margin-top: 0;
+    margin-bottom: 3px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,7 +53,7 @@ label:has(input[type=text]) > p,label:has(input[type=password]) > p {
         outline: 2px solid rgb(80,80,80);
         color: white;
     }
-    input[type=text]::placeholder,input[type=password]::placeholder {
+    input[type=text]::placeholder,input[type=password]::placeholder,input[type=text].filled::placeholder,input[type=password].filled::placeholder {
         color: rgb(120,120,120);
     }
     input[type=text].filled,input[type=password].filled {

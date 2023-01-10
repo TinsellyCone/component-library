@@ -10,26 +10,27 @@
     <link rel="stylesheet" href="./css/chips.css">
     <link rel="stylesheet" href="./css/checkboxes.css">
     <link rel="stylesheet" href="./css/switches.css">
-    <title>TinsellyCone HTML Library</title>
+    <link rel="stylesheet" href="./css/radios.css">
+    <title>TinsellyCone's HTML Library</title>
 </head>
 <body>
-    <h1>HTML Library</h1>
-    <div id="buttons">
+    <div class="category">
+        <h1>HTML Library</h1>
+        <a href="https://github.com/TinsellyCone/component-library/wiki">Wiki</a>
+    </div>
+
+    <div id="buttons" class="category">
         <h3>Buttons</h3>
         <button class="filled">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> -->
             Filled
         </button>
         <button class="transparent">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> -->
             Transparent
         </button>
         <button class="outline">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> -->
             Outline
         </button>
         <button class="subtle">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> -->
             Subtle
         </button>
         <button class="icon filled">
@@ -45,30 +46,49 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
         </button>
     </div>
-    <div id="inputs">
+
+    <div id="inputs" class="category">
         <h3>Input Fields</h3>
-        <input type="text" class="default" placeholder="Default"> <br>
-        <input type="text" class="filled" placeholder="Filled">
+        <label>
+            Email Address
+            <p>This totally won't be sold</p>
+            <input type="text" class="default" placeholder="Default">
+        </label> <br>
+        <label>
+            Email Address
+            <p>This totally won't be sold</p>
+            <input type="text" class="filled" placeholder="Filled">
+        </label>
     </div>
-    <div id="chips">
+
+    <div id="chips" class="category">
         <h3>Chips</h3>
-        <div class="chip filled">Filled
+        <div class="chip filled pointer">Filled
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
-        <div class="chip transparent">Transparent
+        <div class="chip transparent pointer">Transparent
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
-        <div class="chip outline">Outline
+        <div class="chip outline pointer">Outline
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
     </div>
-    <div id="checkboxes">
+
+    <div id="checkboxes" class="category">
         <h3>Checkbox</h3>
-        <div class="checkbox checked" id="checkbox" onclick="checkClick('checkbox')" style="--checkURL: url(../svg/check.svg)"></div>
+        <label><input type="checkbox">I agree to sell my privacy</label>
     </div>
-    <div id="switches">
+
+    <div id="switches" class="category">
         <h3>Switches</h3>
-        <div id="switch" class="switch enabled" onclick="switchClick('switch')"></div>
+        <label><input type="checkbox" class="switch">Switch Option</label>
+    </div>
+
+    <div id="radios" class="category">
+        <h3>Radios</h3>
+        <label><input type="radio" name="radio">Radio 1</label>
+        <label><input type="radio" name="radio">Radio 2</label>
+        <label><input type="radio" name="radio">Radio 3</label>
     </div>
 </body>
 </html>
@@ -77,6 +97,7 @@
     body {
         font-family: 'Open Sans', sans-serif;
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
     }
     
@@ -86,25 +107,26 @@
             color: white;
         }
     }
-</style>
 
-<script>
-    function checkClick(checkboxID) {
-        if (document.getElementById(checkboxID).className == "checkbox checked") {
-            document.getElementById(checkboxID).className = "checkbox";
-        }
-        else {
-           document.getElementById(checkboxID).className = "checkbox checked";
-        }
+    .flex, .category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
     }
-</script>
-<script>
-    function switchClick(switchID) {
-        if (document.getElementById(switchID).className == "switch enabled") {
-            document.getElementById(switchID).className = "switch";
-        }
-        else {
-           document.getElementById(switchID).className = "switch enabled";
-        }
+
+    .category {
+        justify-content: unset;
+        flex-direction: column;
     }
-</script>
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    label {
+        user-select: none;
+    }
+</style>
