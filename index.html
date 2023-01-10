@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="./css/checkboxes.css">
     <link rel="stylesheet" href="./css/switches.css">
     <link rel="stylesheet" href="./css/radios.css">
-    <title>TinsellyCone HTML Library</title>
+    <title>TinsellyCone's HTML Library</title>
 </head>
 <body>
-    <!-- <h1>HTML Library</h1> -->
-    <div id="buttons">
-        <!-- <h3>Buttons</h3> -->
+    <div class="category">
+        <h1>HTML Library</h1>
+        <a href="https://github.com/TinsellyCone/component-library/wiki">Wiki</a>
+    </div>
+
+    <div id="buttons" class="category">
+        <h3>Buttons</h3>
         <button class="filled">
             Filled
         </button>
@@ -42,13 +46,23 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
         </button>
     </div>
-    <div id="inputs">
-        <!-- <h3>Input Fields</h3> -->
-        <input type="text" class="default" placeholder="Default" style="margin: 2px;"> <br>
-        <input type="text" class="filled" placeholder="Filled" style="margin: 2px;">
+
+    <div id="inputs" class="category">
+        <h3>Input Fields</h3>
+        <label>
+            Email Address
+            <p>This totally won't be sold</p>
+            <input type="text" class="default" placeholder="Default">
+        </label> <br>
+        <label>
+            Email Address
+            <p>This totally won't be sold</p>
+            <input type="text" class="filled" placeholder="Filled">
+        </label>
     </div>
-    <div id="chips">
-        <!-- <h3>Chips</h3> -->
+
+    <div id="chips" class="category">
+        <h3>Chips</h3>
         <div class="chip filled pointer">Filled
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
@@ -59,19 +73,22 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
     </div>
-    <div id="checkboxes">
-        <!-- <h3>Checkbox</h3> -->
-        <div class="flex"><input id="checkbox" type="checkbox"><label for="checkbox">I agree to sell my privacy</label></div>
+
+    <div id="checkboxes" class="category">
+        <h3>Checkbox</h3>
+        <label><input type="checkbox">I agree to sell my privacy</label>
     </div>
-    <div id="switches">
-        <!-- <h3>Switches</h3> -->
-        <input type="checkbox" class="switch" style="--checkURL: none">
+
+    <div id="switches" class="category">
+        <h3>Switches</h3>
+        <label><input type="checkbox" class="switch">Switch Option</label>
     </div>
-    <div id="radios">
-        <!-- <h3>Radios</h3> -->
-        <input type="radio" name="radio">
-        <input type="radio" name="radio">
-        <input type="radio" name="radio">
+
+    <div id="radios" class="category">
+        <h3>Radios</h3>
+        <label><input type="radio" name="radio">Radio 1</label>
+        <label><input type="radio" name="radio">Radio 2</label>
+        <label><input type="radio" name="radio">Radio 3</label>
     </div>
 </body>
 </html>
@@ -91,9 +108,25 @@
         }
     }
 
-    .flex {
+    .flex, .category {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .category {
+        justify-content: unset;
+        flex-direction: column;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    label {
+        user-select: none;
     }
 </style>

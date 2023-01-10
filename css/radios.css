@@ -21,3 +21,10 @@ input[type=radio]:checked {
         background-color: #FFF;
     }
 }
+
+label:has(input[type=radio]) {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

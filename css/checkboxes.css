@@ -1,5 +1,5 @@
 input[type=checkbox] {
-    --checkURL: url(../svg/check.svg);
+    --checkURL: url(https://raw.githubusercontent.com/TinsellyCone/component-library/main/svg/check.svg);
     appearance: none;
     height: 18px;
     width: 18px;
@@ -7,7 +7,7 @@ input[type=checkbox] {
     background-color: #FFF;
     border: 1px solid #CED4DA;
     border-radius: 4px;
-    transition: 0.15s background-color ease, 0.15s border ease, 0.15s background-position ease;
+    transition: 0.15s background ease, 0.15s border ease;
     background-image: var(--checkURL);
     background-size: contain;
     background-position: 0px 20px;
@@ -26,4 +26,10 @@ input[type=checkbox]:checked {
         border: 1px solid rgb(80,80,80);
         background-color: rgb(55,55,55);
     }
+}
+
+label:has(input[type=checkbox]) {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
 }
